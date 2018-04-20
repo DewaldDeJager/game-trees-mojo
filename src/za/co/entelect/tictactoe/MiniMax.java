@@ -38,15 +38,8 @@ class MiniMax {
      * @return the score of the board
      */
     private static int miniMax(Board.State player, Board board, int currentPly) {
-        if (currentPly++ == maxPly || board.isGameOver()) {
-            return score(player, board);
-        }
-
-        if (board.getTurn() == player) {
-            return getMax(player, board, currentPly);
-        } else {
-            return getMin(player, board, currentPly);
-        }
+        // TODO: Implement me :)
+        return 0;
     }
 
     /**
@@ -58,24 +51,8 @@ class MiniMax {
      * @return the score of the board
      */
     private static int getMax(Board.State player, Board board, int currentPly) {
-        double bestScore = Double.NEGATIVE_INFINITY;
-        int indexOfBestMove = -1;
-
-        for (Integer theMove : board.getAvailableMoves()) {
-
-            Board modifiedBoard = board.clone();
-            modifiedBoard.move(theMove);
-
-            int score = miniMax(player, modifiedBoard, currentPly);
-
-            if (score >= bestScore) {
-                bestScore = score;
-                indexOfBestMove = theMove;
-            }
-        }
-
-        board.move(indexOfBestMove);
-        return (int) bestScore;
+        // TODO: Implement me :)
+        return 0;
     }
 
     /**
@@ -87,25 +64,8 @@ class MiniMax {
      * @return the score of the board
      */
     private static int getMin(Board.State player, Board board, int currentPly) {
-        double bestScore = Double.POSITIVE_INFINITY;
-        int indexOfBestMove = -1;
-
-        for (Integer theMove : board.getAvailableMoves()) {
-
-            Board modifiedBoard = board.clone();
-            modifiedBoard.move(theMove);
-
-            int score = miniMax(player, modifiedBoard, currentPly);
-
-            if (score <= bestScore) {
-                bestScore = score;
-                indexOfBestMove = theMove;
-            }
-
-        }
-
-        board.move(indexOfBestMove);
-        return (int) bestScore;
+        // TODO: Implement me :)
+        return 0;
     }
 
     /**
@@ -120,15 +80,8 @@ class MiniMax {
             throw new IllegalArgumentException("Player must be X or O.");
         }
 
-        Board.State opponent = (player == Board.State.X) ? Board.State.O : Board.State.X;
-
-        if (board.isGameOver() && board.getWinner() == player) {
-            return 10;
-        } else if (board.isGameOver() && board.getWinner() == opponent) {
-            return -10;
-        } else {
-            return 0;
-        }
+        // TODO: Implement me :)
+        return 0;
     }
 
 

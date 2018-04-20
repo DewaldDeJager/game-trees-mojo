@@ -45,7 +45,7 @@ public class Console {
         if (board.getTurn() == Board.State.X) {
             getPlayerMove();
         } else {
-            Algorithms.alphaBetaAdvanced(board);
+            Algorithms.miniMax(board);
         }
     }
 

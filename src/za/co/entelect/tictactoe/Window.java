@@ -280,7 +280,6 @@ public class Window extends JFrame {
     }
 
     public static void main(String[] args) {
-
         if (args.length == 1) {
             System.out.println("Game Mode: Player vs. Player");
             SwingUtilities.invokeLater(() -> new Window(Mode.Player));
@@ -288,7 +287,5 @@ public class Window extends JFrame {
             System.out.println("Game Mode: Player vs. AI");
             SwingUtilities.invokeLater(() -> new Window(Mode.AI));
         }
-
     }
-
 }
